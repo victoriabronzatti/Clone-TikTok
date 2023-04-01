@@ -22,7 +22,7 @@
     overflow-x: hidden;
 }
 .videoFooterMusic__text p{
-    animation: moveTheText 5s infinite linear;
+    animation: moveTheText 3s infinite linear;
 }
 
 .videoFooter__record{

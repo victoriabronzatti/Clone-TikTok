@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
-import coffee from "../video/coffee.mp4";
 import VideoFooter from "./components/footer/VideoFooter";
+import VideoSiderbar from "./components/sidebar/VideoSiderbar";
 import "./video.css";
 
 
-function Video() {
+function Video({likes, messages, shares, name, description, music, url}) {
   const videoRef = useRef(null);
   const [play, setPlay] = useState(false);
 
@@ -26,13 +26,18 @@ function Video() {
         onClick={handdleStart}
         autoPlay
         loop
-        src={coffee}
+        src={url}
       ></video>
-      {/*Side bar */}
-
-      
-      {/*Footer */}
-      <VideoFooter />
+      <VideoSiderbar 
+      likes={likes}
+      messages={messages}
+      shares={shares}
+      />
+      <VideoFooter 
+       name={name}
+       description={description}
+       music={music}
+       />
 
     </div>
   );
